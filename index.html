@@ -3,20 +3,20 @@
 <head>
 <title>IDRIS Temple</title>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+
+.form {
+  margin: auto;
+}
+
 	.contact {
     margin: auto;
     width: 60%;
     border: 1px solid #8c8c8c;
-    }
-    
-	.footer {
-    margin: auto;
-    width: 15%;
     }
 </style>
 </head>
@@ -25,26 +25,37 @@
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-   <a href="#home" class="w3-bar-item w3-button">
-   <img class="w3-image" src="https://ahmedtemple37.org/wp-content/uploads/2023/03/AEAONMSLogoColor3TM-1-e1679515827902.png" alt= "temple" width="75" height="75">
-    <b>IDRIS Temple</b> #239 A.E.A.O.N.M.S</a>
+   <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+ <a href="#" class="w3-hide-medium w3-hide-large w3-bar-item w3-button w3-padding-large">IDRIS Temple</a>  
+<div class="w3-bar-item">
+    <p class="w3-hide-small"><img src="https://ahmedtemple37.org/wp-content/uploads/2023/03/AEAONMSLogoColor3TM-1-e1679515827902.png" alt= "temple" width="50" height="40">
+    <b>IDRIS Temple</b> #239 A.E.A.O.N.M.S</p>
     <!-- Float links to the right. Hide them on small screens -->
     <div class="w3-display-bottomright w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button"><h4>About IDRIS</h4></a>
+      <a href="#about" class="w3-bar-item w3-button"><h4>About</h4></a>
       <a href="#projects" class="w3-bar-item w3-button"><h4>Team</h4></a>
       <a href="#contact" class="w3-bar-item w3-button"><h4>Contact</h4></a>
-     
+     </div>
     </div>
   </div>
 </div>
+
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#band" class="w3-bar-item w3-button w3-padding-large"><h4>About IDRIS</h4></a>
+  <a href="#tour" class="w3-bar-item w3-button w3-padding-large"><h4>Team</h4></a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large"><h4>Contact</h4></a>
+</div>
+
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1250px;margin-top:46px">
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
   <img class="w3-image" src="https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/410825682_362011063180507_2384132926152764518_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=on37HbGZxbEQ7kNvgGTYDO6&_nc_ht=scontent-dfw5-1.xx&oh=00_AYCcPKq91KSkGfu11CZqVfWlbcQThmJK3xm1lQ_qAk4b0A&oe=665443E4" alt="IDRIS TEMPLE" width="1500" height="800">
 </header>
-
-<!-- Page content -->
-<div class="w3-content w3-padding" style="max-width:1564px">
 
   <!-- Project Section -->
   <div class="w3-container w3-padding-32" id="projects">
@@ -113,10 +124,10 @@ Temple’s Contact: ahmed37recorder@gmail.com</p>
   </div>
 
   <!-- Contact Section -->
-  <div class="w3-card w3-padding-32 contact" id="contact">
+  <div class="w3-container w3-card w3-padding-16 contact" id="contact">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
     <p>Lets get in touch and talk about your next project.</p>
-    <form action="/action_page.php" target="_blank">
+    <form class="w3-container" action="/action_page.php" target="_blank">
       <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
       <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
       <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="Subject">
@@ -129,13 +140,39 @@ Temple’s Contact: ahmed37recorder@gmail.com</p>
 
 <!-- End page content -->
 </div>
-  <!-- Footer -->
-<footer class="w3-text-grey w3-xxxlarge footer">
-   <i class="footer fa fa-facebook-official w3-hover-opacity"></i>
-   <i class="footer fa fa-instagram w3-hover-opacity"></i>
-   <i class="footer fa fa-twitter w3-hover-opacity"></i>
-  <!-- End footer -->
+
+    <!-- Footer -->
+  <footer class="w3-center w3-content w3-padding-32 w3-text-grey w3-xlarge">
+    <a href="" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity w3-xxxlarge"></i></a>
+    <a href="" target="_blank"><i class="fa fa-instagram w3-hover-opacity w3-xxxlarge"></i></a>
+    <!-- End footer -->
   </footer>
+
+<script>
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 
 </body>
 </html>
